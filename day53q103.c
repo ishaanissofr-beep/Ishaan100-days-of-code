@@ -1,0 +1,20 @@
+/* Find the leftmost pivot index of an array. */
+#include<stdio.h>
+int main(){
+    int a[100],n,i,total=0,left=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+        total=total+a[i];
+    }
+    for(i=0;i<n;i++){
+        total=total-a[i];
+        if(left==total){
+            printf("%d",i);
+            return 0;
+        }
+        left=left+a[i];
+    }
+    printf("-1");
+    return 0;
+}
