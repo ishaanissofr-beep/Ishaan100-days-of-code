@@ -1,0 +1,17 @@
+/* Print all sub-strings of a string. */
+#include<stdio.h>
+int main(){
+    char s[100];
+    int i,j,k,n=0;
+    scanf("%s",s);
+    while(s[n]!='\0')
+        n++;
+    for(i=0;i<n;i++){
+        for(j=i;j<n;j++){
+            for(k=i;k<=j;k++)
+                printf("%c",s[k]);
+            printf("\n");
+        }
+    }
+    return 0;
+}
